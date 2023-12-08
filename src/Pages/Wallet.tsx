@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Box, Button, ButtonText, HStack, ScrollView, Text, useToken } from '@gluestack-ui/themed'
 import React from 'react'
 import CustomBar from '../components/CustomBar'

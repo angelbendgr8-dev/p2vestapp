@@ -1,8 +1,7 @@
-import { Box, HStack, Icon, Image, Text, VStack } from '@gluestack-ui/themed'
-import React from 'react'
-import { circle1, wallet } from '../../assets';
-import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
-import Wallet from '../../assets/svgs/wallet.svg'
+import { Box, HStack, Text, VStack } from '@gluestack-ui/themed';
+import React from 'react';
+import { heightPercentageToDP as hp } from 'react-native-responsive-screen';
+import Wallet from '../../assets/svgs/wallet.svg';
 const WalletCard = () => {
     return (
 

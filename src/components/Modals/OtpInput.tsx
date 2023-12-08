@@ -1,10 +1,9 @@
-import { Box, ChevronDownIcon, Input, InputField, Pressable, Select, SelectBackdrop, SelectContent, SelectDragIndicator, SelectDragIndicatorWrapper, SelectIcon, SelectInput, SelectItem, SelectPortal, SelectTrigger, VStack } from "@gluestack-ui/themed";
-import { Heading, Icon, Modal, ModalBackdrop, ModalBody, ModalContent, ModalFooter, ModalHeader, Text } from "@gluestack-ui/themed";
+import { Box, VStack } from "@gluestack-ui/themed";
+import { Heading, Modal, ModalBackdrop, ModalBody, ModalContent, ModalFooter, ModalHeader, Text } from "@gluestack-ui/themed";
 import React, { useState } from "react";
 import { StyleSheet } from "react-native";
 import { OtpInput } from "react-native-otp-entry";
 
-import AntDesign from 'react-native-vector-icons/AntDesign'
 
 export default function TransactionConfirmation({ open, close }: { open: boolean, close: any }) {
     const [accountNumber, setAccountNumber] = useState('')

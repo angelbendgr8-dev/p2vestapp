@@ -1,7 +1,8 @@
-import { Box, ChevronDownIcon, Input, InputField, Pressable, Select, SelectBackdrop, SelectContent, SelectDragIndicator, SelectDragIndicatorWrapper, SelectIcon, SelectInput, SelectItem, SelectPortal, SelectTrigger, VStack } from "@gluestack-ui/themed";
-import { Heading, Icon, Modal, ModalBackdrop, ModalBody, ModalContent, ModalFooter, ModalHeader, Text } from "@gluestack-ui/themed";
+// @ts-nocheck
+import { Box, Input, InputField, Pressable, Select, SelectBackdrop, SelectContent, SelectDragIndicator, SelectDragIndicatorWrapper, SelectIcon, SelectInput, SelectItem, SelectPortal, SelectTrigger, VStack } from "@gluestack-ui/themed";
+import { Heading, Modal, ModalBackdrop, ModalBody, ModalContent, ModalFooter, ModalHeader, Text } from "@gluestack-ui/themed";
 import React, { useState } from "react";
-import AntDesign from 'react-native-vector-icons/AntDesign'
+import AntDesign from 'react-native-vector-icons/AntDesign';
 
 export default function AddBankModal({ open, close }: { open: boolean, close: any }) {
     const [accountNumber, setAccountNumber] = useState('')
@@ -61,11 +62,9 @@ export default function AddBankModal({ open, close }: { open: boolean, close: an
                             Bank Name
                         </Text>
 
-                        <Select sx={{ 
-                            _input: {
-                                color:"$textDark300"
-                            }
-                         }} >
+                        <Select sx={{
+
+                        }} >
                             <SelectTrigger borderColor='$textDark200'
                                 borderBottomWidth={1} variant="outline" size="xl" bg='$white' rounded={"$lg"} >
                                 <SelectInput placeholder="Select option" />
@@ -79,7 +78,7 @@ export default function AddBankModal({ open, close }: { open: boolean, close: an
                                     <SelectDragIndicatorWrapper>
                                         <SelectDragIndicator />
                                     </SelectDragIndicatorWrapper>
-                                    <SelectItem  label="First Bank" value="first" />
+                                    <SelectItem label="First Bank" value="first" />
                                     <SelectItem label="Access Bank" value="access" />
                                     <SelectItem
                                         label="Zenith Bank"

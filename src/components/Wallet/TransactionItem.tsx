@@ -1,8 +1,7 @@
-import { Box, HStack, Text, useToken } from '@gluestack-ui/themed'
-import React, { FC } from 'react'
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import In from '../../assets/svgs/in.svg'
-import Out from '../../assets/svgs/out.svg'
+import { Box, HStack, Text, useToken } from '@gluestack-ui/themed';
+import React, { FC } from 'react';
+import In from '../../assets/svgs/in.svg';
+import Out from '../../assets/svgs/out.svg';
 export type Transaction = {
     type: string,
     amount: string,

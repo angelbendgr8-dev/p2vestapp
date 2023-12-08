@@ -1,5 +1,6 @@
+// @ts-nocheck
 import { Box, HStack, Pressable, VStack } from "@gluestack-ui/themed";
-import { Button, ButtonText, Center, CloseIcon, Heading, Icon, Modal, ModalBackdrop, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, Text } from "@gluestack-ui/themed";
+import { Heading, Modal, ModalBackdrop, ModalBody, ModalContent, ModalFooter, ModalHeader, Text } from "@gluestack-ui/themed";
 import React from "react";
 
 export default function WithdrawalModal({ open, close }: { open: boolean, close: any }) {

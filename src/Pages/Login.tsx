@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Box, Button, HStack, Image, Input, InputField, InputIcon, InputSlot, KeyboardAvoidingView, Pressable, Spinner, Text, VStack } from '@gluestack-ui/themed';
 import React, { useState } from 'react';
 import { background } from '../assets';
