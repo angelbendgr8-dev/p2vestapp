@@ -41,9 +41,9 @@ const Login = () => {
         }, 5000);
     }
     return (
-        <Box flex={1} bg='$primary0' >
+        <Box flex={1} bg={'$primary0'} position='relative'  >
             {/* <CustomBar barStyle='dark-content'  backgroundColor={'#E5F4F3'} /> */}
-            <KeyboardAvoidingView  behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
+            <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
 
                 <VStack   >
                     <Image
@@ -62,7 +62,7 @@ const Login = () => {
                     </Box>
 
                     <Formik
-                        initialValues={{ username: '', password: ' ' }}
+                        initialValues={{ username: '', password: '' }}
                         validationSchema={LoginSchema}
                         onSubmit={values => onSubmit(values)}
                     >
@@ -101,7 +101,7 @@ const Login = () => {
 
                                 </Box>
                                 <Box my={'$5'}>
-                                    <Input
+                                <Input
                                         variant="outline"
                                         w='$full'
                                         size="xl"
@@ -115,19 +115,16 @@ const Login = () => {
                                         borderBottomWidth={1}
                                     >
                                         <InputSlot px={2}>
-                                            <InputIcon><Key height={25} width={25} /></InputIcon>
+                                            <InputIcon><User height={24} width={24} /></InputIcon>
                                         </InputSlot>
                                         <InputField
                                             value={values.password}
-                                            onChangeText={handleChange('password')}
 
                                             onBlur={handleBlur('password')}
 
+                                            onChangeText={handleChange('password')}
                                             placeholder="Password"
                                         />
-                                        <InputSlot px={2}>
-                                            <Text fontFamily='Roboto-Bold' fontSize={'$lg'} color='$primary100'>Forgot</Text>
-                                        </InputSlot>
                                     </Input>
 
                                     {errors.password && touched.password ? (
@@ -136,7 +133,7 @@ const Login = () => {
 
                                 </Box>
 
-                                <Pressable onPress={() => handleSubmit()} size='xl' w={'$full'} alignSelf='center' my={24}>
+                                <Pressable onPress={() => handleSubmit()} size='xl' w={'$full'} alignSelf='center' my={6}>
                                     {({ pressed }) => {
                                         return (
                                             <Box alignItems='center' rounded={'$lg'} w={'$full'} py='$4' bg={pressed ? '$primary50' : '$primary100'}>
@@ -144,7 +141,7 @@ const Login = () => {
                                                     loading ? (
                                                         <Spinner size="small" color={'$white'} />
                                                     ) : (
-                                                        <Text color={'$white'} fontSize={RFValue(18)} fontFamily='Roboto-Bold' lineHeight={24} textTransform='capitalize'>
+                                                        <Text color={'$white'} fontSize={RFValue(18)} fontFamily='Roboto-Normal' lineHeight={24} textTransform='capitalize'>
                                                             Sign In
                                                         </Text>
 
@@ -164,15 +161,15 @@ const Login = () => {
 
 
                 </VStack>
-                <HStack flexDirection='row' mb={'$10'} justifyContent='center' alignItems='center'>
-
-                    <Text color='$gray' fontSize={'$xl'} lineHeight={24} >Don't have an account?</Text>
-                    <Button variant='link' sx={{ _text: { color: 'black', fontSize: 12 } }} >
-                        <Text pl='$2' color='$primary100' fontSize={'$xl'} >Sign up</Text>
-                    </Button>
-
-                </HStack>
             </KeyboardAvoidingView>
+            <HStack position='absolute' left={'20%'} bottom={60} flexDirection='row' justifyContent='center' alignItems='center'>
+
+                <Text color='$gray' fontSize={'$xl'} lineHeight={24} >Don't have an account?</Text>
+                <Button variant='link' sx={{ _text: { color: 'black', fontSize: 12 } }} >
+                    <Text pl='$2' color='$primary100' fontSize={'$xl'} >Sign up</Text>
+                </Button>
+
+            </HStack>
         </Box>
     )
 }
